@@ -1,6 +1,8 @@
 import type { Rule } from 'eslint'
 import type { ImportDeclaration } from 'estree'
+// @ts-expect-error
 import { readFileSync } from 'fs'
+// @ts-expect-error
 import { resolve } from 'path'
 
 type ESLintContext = Rule.RuleContext

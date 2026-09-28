@@ -1,6 +1,8 @@
 // @ts-expect-error
 import { minify } from 'html-minifier-terser'
+// @ts-expect-error
 import { cp, readFile, writeFile } from 'node:fs/promises'
+// @ts-expect-error
 import { resolve } from 'node:path'
 
 await main()

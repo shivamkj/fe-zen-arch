@@ -1,4 +1,6 @@
+// @ts-expect-error
 import { execSync } from 'child_process'
+// @ts-expect-error
 import { setTimeout } from 'timers/promises'
 
 // Add packages to ignore from auto updates
