@@ -20,7 +20,7 @@ echo "Checking typescript issues"
 tsc --incremental
 
 # Convert eslint plugin written in typescript to javascript
-node fe-base/scripts/compile-typescript.js fe-base/scripts/eslint-plugins/const-to-function.ts
+node fe-zen-arch/scripts/compile-typescript.js fe-zen-arch/scripts/eslint-plugins/const-to-function.ts
 
 echo "Checking eslint issues"
 if [[ "$*" == *"--fix"* ]]; then

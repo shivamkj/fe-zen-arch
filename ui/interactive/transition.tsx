@@ -28,7 +28,7 @@ export function Transition({ show = true, enterTo, leaveTo, duration = 300, clas
     }
 
     let frameId: number
-    let timeout: NodeJS.Timeout | undefined
+    let timeout: ReturnType<typeof setTimeout> | undefined
     if (show) {
       setDisplayNone(false)
       // First frame: Apply initial state

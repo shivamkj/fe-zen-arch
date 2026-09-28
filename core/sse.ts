@@ -15,7 +15,7 @@ export function useSSE({ endpoint, onMessage, onClose, onError }: SSELogsHook) {
   const [isConnected, setIsConnected] = useState(false)
   const [retryCount, setRetryCount] = useState(0)
   const eventSourceRef = useRef<EventSource | null>(null)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const clearConnection = useCallback(() => {
     if (eventSourceRef.current) {

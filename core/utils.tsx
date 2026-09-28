@@ -49,7 +49,7 @@ function capitalize(str: string) {
 const defaultDebounceTime = 500
 
 export function debounce<T extends (...args: any[]) => any>(func: T, wait: number = defaultDebounceTime) {
-  let timeout: NodeJS.Timeout
+  let timeout: ReturnType<typeof setTimeout>
   function debounced(...args: Parameters<T>) {
     clearTimeout(timeout)
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
